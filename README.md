@@ -1,2 +1,2 @@
 # cp
-programming codes related to competitive coding . 
+Algorithim implementaion and solutions to codechef and codeforces problems.
