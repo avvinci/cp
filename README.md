@@ -1,2 +1,2 @@
 # cp
-Algorithim implementaion and solutions to codechef and codeforces problems.
+Algorithmic implementation and solutions to codechef and codeforces problems.
