@@ -1,0 +1,60 @@
+// avvinci - summer_17  home
+// #include"prettyprint.hpp"
+#include<bits/stdc++.h>
+using namespace std;
+
+typedef pair<long long int , long long int> P;
+
+#define mod 1000000007 
+#define pb push_back
+#define mk make_pair
+#define fs first
+#define sc second
+#define ll long long int
+#define fr(it,st,en) for(it=st;it<en;it++)
+#define all(container) container.begin(),container.end()
+#define INP ios_base::sync_with_stdio(false);cin.tie(NULL);
+#define ws(x) cout << #x << " = " << x << endl
+#define sz(x)  (ll)x.size()
+#define N 104
+
+const long long infl = 1e18+5;
+
+ll m,n,q,x,y,mx =-1,mn=infl,f,val,sz,cnt,ans,t=1,i,j,ind=-1;
+char a[N][N] ;
+void pa(){
+	int i,j ; 
+	fr(i,0,n){
+		fr(j,0,m){
+			cout<< a[i][j] <<" " ;
+		}
+		cout<<"\n";
+	}
+	cout<<"\n\n";
+}
+
+int main(){
+INP
+if (fopen("inp.txt", "r")) {
+    freopen("myfile.txt","w",stdout);
+    freopen("inp.txt", "r", stdin);
+}
+
+cin>>t;
+while(t--){
+	cin>>n>>m;
+	if(n < 3 && m < 3 ) {cout<<"-1\n" ; continue ; }
+	fr(i,0,n){
+		fr(j,0,m){
+			cin>>a[i][j];
+		}
+	}
+	pa();
+	
+
+}
+
+
+
+return 0 ;
+}

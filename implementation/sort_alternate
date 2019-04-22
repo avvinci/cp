@@ -1,0 +1,79 @@
+/*Structure of Node of the linked list is as
+struct Node
+{
+	int data;
+	struct Node *next;
+};
+*/
+// your task is to complete this function
+struct Node* getlist( Node * head){
+    if(head == NULL) return head ;
+    struct Node * n = (struct Node *)malloc(sizeof(struct Node )) ; 
+    struct Node* p = n ; 
+   
+    while(head!=NULL  ){
+        p->next = head;
+        // p = p->next ;
+        // cout<<p->data<<" ";
+        head = head->next;
+        if(head== NULL ) break ;
+        head = head->next;
+    }
+   
+    p->next = NULL;
+    return n->next;
+}
+struct Node * reverse(Node* head){
+    if(head == NULL || head->next == NULL ) return head ; 
+    struct Node* prev  =NULL  ,* cur = head ,* nt; 
+    while(cur->next != NULL){
+        nt = cur->next;
+        cur->next = prev;
+        prev = cur ; 
+        cur = nt ; 
+    }
+    head = prev ;
+    return head; 
+}
+struct Node * merge(struct Node * a , struct Node * b ){
+    if( a == NULL ) return b ;
+    if(b == NULL) return  a; 
+    struct Node * res  ; 
+    if(a->data < b->data){
+        res =a ; 
+        res->next = merge(a->next,b);
+    }
+    else{
+        res = b ;
+        res->next = merge(a,b->next);
+    }
+    return res ; 
+}
+void sort(Node **head)
+{
+     // Code here
+     struct Node * cur = *head ; 
+     struct Node * a =  getlist( cur ) ;
+    //  while(a!=NULL) {
+    //      cout<<a->data<<" " ; 
+    //      a =a->next;
+    //  }
+    cout<<"\n";
+    cur = *head;
+    //  struct Node * b =  getlist( cur->next ) ;
+    while(cur!=NULL) {
+         cout<<cur->data<<" " ; 
+         cur =cur->next;
+     }
+     cout<<"\n"; 
+     
+    //  struct Node * b1 = reverse(b);
+    //   while(b1 !=NULL) {
+    //      cout<<b1->data<<" " ; 
+    //      b1 =b1->next;
+    //  }
+    //  cout<<"\n"; 
+
+    //  *head = merge(a,b ) ; 
+     
+}

@@ -1,0 +1,24 @@
+/*You are required to complete this method*/
+
+void get(vector<string > & v , string s , int cnt ,int ind){
+    if(ind == s.size() )
+    {
+        if(cnt == 3)    v .push_back(s);
+        return  ; 
+    }
+    get(v,s,cnt,ind+1) ; 
+    int i = s.size()  ;
+    i-- ; 
+    while(i>=0 && s[i] != '.'){
+        int r = s[i]-'0';
+        
+    }
+    
+}
+vector<string> genIp(string s)
+{
+    //Your code here
+    vector< string > v ;
+    get(v,string,cnt,ind);
+    return v;
+}
